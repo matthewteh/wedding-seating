@@ -1,1 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Wedding Seating Plan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        padding: 20px;
+      }
+      input {
+        padding: 10px;
+        width: 80%;
+        max-width: 300px;
+      }
+      button {
+        padding: 10px 20px;
+        margin-top: 10px;
+      }
+      img {
+        max-width: 100%;
+        margin-top: 20px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Find Your Seat</h2>
+    <input id="name" placeholder="Enter your full name" />
+    <br />
+    <button onclick="findSeat()">Search</button>
 
+    <div id="result"></div>
+    <img id="plan" src="seating-plan.jpg" />
+
+    <script>
+      const guests = [
+        { name: "John Tan", table: 6, seat: "B" },
+        { name: "Michelle Lim", table: 3, seat: "A" },
+      ];
+
+      function findSeat() {
+        const input = document
+          .getElementById("name")
+          .value.trim()
+          .toLowerCase();
+        const guest = guests.find((g) => g.name.toLowerCase() === input);
+
+        if (guest) {
+          document.getElementById("result").innerHTML =
+            `You are seated at <b>Table ${guest.table}, Seat ${guest.seat}</b>`;
+          document.getElementById("plan").style.display = "block";
+        } else {
+          document.getElementById("result").innerHTML =
+            "Name not found. Please check spelling.";
+        }
+      }
+    </script>
+  </body>
+</html>
