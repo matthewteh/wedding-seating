@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,11 @@
   "bugs": {
     "url": "https://github.com/matthewteh/wedding-seating/issues"
   },
+  "dependencies": {
+    "nuxt": "2.15.8"
+  },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "tailwindcss": "^2.2.4",
     "prettier": "^2.3.2"
   }
