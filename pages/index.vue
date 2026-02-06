@@ -1,12 +1,11 @@
 <template>
-    <div>
-        testtest
-    </div>
+  <div>
+    testtest
+    <h1>Welcome to the website</h1>
+    <a></a>
+  </div>
 </template>
 
-<script>
+<script></script>
 
-</script>
-
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
