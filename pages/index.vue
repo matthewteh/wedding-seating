@@ -1,6 +1,12 @@
 <template>
-  <div><h1>testtest</h1></div>
+    <div>
+        testtest
+    </div>
 </template>
 
 <script>
+
 </script>
+
+<style scoped lang="scss">
+</style>
