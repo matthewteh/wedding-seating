@@ -1,7 +1,7 @@
 {
   "name": "wedding-seating",
   "version": "1.0.0",
-  "description": "",
+  "description": "- [Node.js](https://nodejs.org/en/) (v18.20.8)\r - [Yarn](https://classic.yarnpkg.com/en/docs/install) (v1.22.22)",
   "main": "script.js",
   "scripts": {
     "dev": "nuxt",
@@ -16,7 +16,11 @@
     "url": "https://github.com/matthewteh/wedding-seating/issues"
   },
   "dependencies": {
-    "nuxt": "2.15.8"
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "nuxt": "2.15.8",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -26,5 +30,10 @@
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewteh/wedding-seating.git"
+  },
+  "homepage": "https://github.com/matthewteh/wedding-seating#readme"
 }
