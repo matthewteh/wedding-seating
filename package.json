@@ -7,12 +7,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "deploy": "gh-pages -d dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/matthewteh/wedding-seating.git"
+    "generate": "nuxt generate"
   },
   "keywords": [],
   "author": "",
@@ -29,7 +24,6 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "gh-pages": "^6.3.0",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.4"
   }

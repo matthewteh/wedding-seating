@@ -193,14 +193,14 @@ export async function setContext (app, context) {
   if (!app.context) {
     app.context = {
       isStatic: process.static,
-      isDev: false,
+      isDev: true,
       isHMR: false,
       app,
 
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {}
+      env: {"DOMAIN_URL":"http://localhost:3000","S3_BUCKET":"","NEWSLETTER_API_URL":"","SHARE_STORY_API_URL":"","CLOUDFRONT_URL":"","FACEBOOK_PIXEL_ID":"","SANITY_PROJECT_ID":"","DATADOG_CLIENT_TOKEN":"","DATADOG_SERVICE_NAME":"","DATADOG_ENV_NAME":"","DATADOG_RUM_APP_ID":"","DATADOG_RUM_CLIENT_TOKEN":"","DATADOG_RUM_SERVICE_NAME":""}
     }
     // Only set once
 
@@ -279,7 +279,7 @@ export async function setContext (app, context) {
   app.context.next = context.next
   app.context._redirected = false
   app.context._errored = false
-  app.context.isHMR = false
+  app.context.isHMR = Boolean(context.isHMR)
   app.context.params = app.context.route.params || {}
   app.context.query = app.context.route.query || {}
 }
@@ -297,6 +297,9 @@ export function middlewareSeries (promises, appContext) {
 export function promisify (fn, context) {
   let promise
   if (fn.length === 2) {
+      console.warn('Callback-based asyncData, fetch or middleware calls are deprecated. ' +
+        'Please switch to promises or async/await syntax')
+
     // fn(context, callback)
     promise = new Promise((resolve) => {
       fn(context, function (err, data) {
