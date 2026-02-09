@@ -19,8 +19,11 @@ export default {
       },
     ],
   },
-
+  router :{
+    base: 'wedding-seating'
+  },
   build: {
+    publicPath: 'wedding-seating/_nuxt',
     babel: {
       cacheDirectory: false,
     },
